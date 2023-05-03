@@ -39,12 +39,12 @@ function FlashSale() {
                         color: '#757575',
                         fontFamily: 'Roboto-Regular',
                         fontSize: '22px',
-                        textAlign:'center',
-                        fontWeight:600,
-                        marginBottom:2,
-                        marginTop:5
+                        textAlign: 'center',
+                        fontWeight: 600,
+                        marginBottom: 2,
+                        marginTop: 5
                     }}>
-                    FlashSale
+                    New Sale
                 </Typography>
                 <Box sx={{
                     background: 'white',
@@ -52,7 +52,7 @@ function FlashSale() {
                     paddingBottom: '20px'
                 }}>
                     <Stack
-                         direction={{xs:'column',sm:'row'}}
+                        direction={{ xs: 'column', sm: 'row' }}
                         spacing={5}
                         alignItems={'center'}
                         paddingLeft={'10px'}
@@ -74,8 +74,8 @@ function FlashSale() {
                             <Typography sx={{
                                 color: ' #202020',
                                 fontSize: '14px',
-                                display:{
-                                    xs:'none',sm:'block'
+                                display: {
+                                    xs: 'none', sm: 'block'
                                 }
                             }}>Ending in</Typography>
                             <Box sx={{
@@ -116,20 +116,20 @@ function FlashSale() {
 
                     {/*  */}
 
-                    <Grid container sx={{width:'98%',mx:'auto'}} spacing={2}>
-                    {saledata.map((item) => {
-                  return (
-                      <Grid item md={2.4} sm={6} xs={12}>
-                        <Link to="/detail" style={{
-                            textDecoration:'none'
-                        }}>
-                     
-                          <BasicCard image={item.Product_img} price={item.Product_price} title={item.product_title} />
-                          </Link>
-                      </Grid>
+                    <Grid container sx={{ width: '98%', mx: 'auto' }} spacing={2}>
+                        {saledata.map((item) => {
+                            return (
+                                <Grid item md={2.4} sm={6} xs={12}>
+                                    <Link to="/detail" style={{
+                                        textDecoration: 'none'
+                                    }}>
 
-                  );
-              })}
+                                        <BasicCard image={item.Product_img} price={item.Product_price} title={item.product_title} />
+                                    </Link>
+                                </Grid>
+
+                            );
+                        })}
 
                     </Grid>
 
